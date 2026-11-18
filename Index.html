@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#24152f">
+<title>Princess Vanshiii's Royal Kingdom</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&display=swap');
+:root{--ink:#fff8e8;--gold:#f6d78b;--gold2:#c58a38;--plum:#24152f;--rose:#9b5574;--pink:#f6d9e5;--glass:rgba(255,248,232,.09)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 50% -10%,#70415e 0,#35203e 42%,#1c1228 100%);color:var(--ink);font-family:'DM Sans',sans-serif;min-height:100vh;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.28;background-image:radial-gradient(#ffe9b5 1px,transparent 1px),radial-gradient(#f5c7dc 1px,transparent 1px);background-size:83px 83px,127px 127px;background-position:0 0,40px 55px;z-index:-1}
+header{position:sticky;top:0;z-index:5;backdrop-filter:blur(14px);background:rgba(28,17,37,.78);border-bottom:1px solid #f4d58b33;padding:12px 5%;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{font-family:Cinzel,serif;letter-spacing:2px;color:var(--gold);font-size:13px}.music{border:1px solid #f6d78b88;background:#ffffff10;color:var(--ink);border-radius:30px;padding:9px 13px;display:flex;gap:8px;align-items:center;font-weight:600;cursor:pointer}
+main{max-width:1050px;margin:auto;padding:0 20px 70px}.hero{text-align:center;padding:65px 15px 45px;position:relative}.eyebrow{color:var(--gold);letter-spacing:4px;text-transform:uppercase;font-size:11px}.crown{font-size:65px;filter:drop-shadow(0 0 20px #f7d78b77);animation:float 3s ease-in-out infinite}@keyframes float{50%{transform:translateY(-9px) rotate(3deg)}}h1{font-family:Cinzel,serif;font-size:clamp(29px,6vw,58px);line-height:1.2;margin:12px 0;color:#ffe8b5;text-shadow:0 4px 25px #e3b45b44}.script{font-family:'Great Vibes',cursive;color:#f4c8dc;font-size:clamp(30px,5vw,43px);margin:5px 0 15px}.sub{max-width:570px;margin:0 auto;color:#f4e8e4cc;line-height:1.7}.goldbtn{border:0;border-radius:30px;padding:13px 22px;margin:20px 7px 0;background:linear-gradient(135deg,#ffe8a9,#c58a38);color:#382238;font-weight:800;letter-spacing:.4px;cursor:pointer;box-shadow:0 7px 25px #d7a34a33;transition:.2s}.goldbtn:hover{transform:translateY(-2px);filter:brightness(1.08)}.ghost{background:#ffffff0b;border:1px solid #f6d78b66;color:var(--gold)}
+section{margin:30px 0;padding:27px;border:1px solid #f4d58b38;border-radius:23px;background:linear-gradient(135deg,#ffffff0d,#ffffff05);box-shadow:0 15px 50px #08051033}h2{font-family:Cinzel,serif;color:var(--gold);font-size:clamp(20px,4vw,27px);margin:0 0 10px}.intro{color:#f3e5e1bb;line-height:1.6;margin:0 0 20px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}.gamecard{border:1px solid #f4d58b40;border-radius:17px;padding:18px;background:#170f2588}.gamecard .emoji{font-size:34px}.gamecard h3{font-family:Cinzel,serif;color:#ffe5aa;margin:9px 0}.gamecard p{font-size:13px;color:#f2e5e1bb;line-height:1.55;min-height:40px}.gamecard button{margin-top:5px}.gamearea{margin-top:18px;border-radius:16px;padding:18px;background:#100b1dcc;border:1px solid #f4d58b44;text-align:center;display:none}.gamearea.active{display:block}.stat{color:var(--gold);font-weight:700;margin:8px}.playfield{height:280px;position:relative;overflow:hidden;border-radius:14px;background:radial-gradient(ellipse at 50% 0,#78435f,#2a1a3b 70%);border:1px solid #f4d58b44;touch-action:manipulation}.falling{position:absolute;font-size:28px;cursor:pointer;user-select:none;animation:drop linear forwards}.heartbtn{font-size:35px;background:#ffffff12;border:1px solid #f5cadd55;border-radius:14px;padding:12px;cursor:pointer;margin:5px}.riddle{font-size:18px;line-height:1.6;color:#ffe9bf}.answer{display:block;width:min(100%,390px);margin:9px auto;padding:12px;border-radius:12px;border:1px solid #f5d78b66;background:#ffffff0c;color:white;cursor:pointer}.answer:hover{background:#f4d58b22}.letter{font-size:16px;line-height:1.9;color:#f8e9e5}.letter strong{color:#ffe0a0}.certificate{display:none;text-align:center;border:2px solid #e8c16e;padding:28px;border-radius:15px;background:linear-gradient(145deg,#fff2cf,#e9c68d);color:#4b2b39;box-shadow:inset 0 0 0 6px #fff2cf,inset 0 0 0 8px #c18b45}.certificate.show{display:block}.certificate h2{color:#80502b}.certname{font-family:'Great Vibes',cursive;font-size:54px;color:#8b4260;margin:8px}.seal{font-size:40px}.small{font-size:12px;color:#f1dfd7aa}.footer{text-align:center;color:#e8d2d4aa;font-size:12px;padding:25px}
+.overlay{position:fixed;inset:0;z-index:20;background:radial-gradient(ellipse at center,#67405b,#1c1228 75%);display:flex;align-items:center;justify-content:center;padding:22px;text-align:center;transition:opacity .5s}.overlay.hide{opacity:0;pointer-events:none}.welcome{max-width:540px}.welcome .crown{font-size:75px}.welcome h1{font-size:clamp(32px,8vw,58px)}.spark{position:fixed;pointer-events:none;color:#ffe6a4;animation:twinkle 2s infinite alternate}@keyframes twinkle{to{opacity:.2;transform:scale(.65)}}@media(max-width:600px){section{padding:20px 15px}.hero{padding-top:45px}.brand{font-size:10px}.playfield{height:250px}}
+</style>
+</head>
+<body>
+<div class="overlay" id="welcome">
+ <div class="welcome"><div class="crown">👑</div><div class="eyebrow">A royal invitation</div><h1>Welcome, Princess<br>Vanshiii</h1><div class="script">Your kingdom awaits...</div><p class="sub">Bas aapke liye banaya hai, Mdmjiii. Thoda sa royal, thoda sa cute… just like you.</p><button class="goldbtn" onclick="enterKingdom()">Enter the Kingdom ✨</button><p class="small">Turn your sound on for a little fairytale melody.</p></div>
+</div>
+<header><div class="brand">✧ THE ROYAL KINGDOM ✧</div><button class="music" id="musicBtn" onclick="toggleMusic()">♫ <span id="musicLabel">Play music</span></button></header>
+<main>
+ <div class="hero"><div class="crown">👑</div><div class="eyebrow">By royal invitation</div><h1>Princess Vanshiii</h1><div class="script">A little something for you</div><p class="sub">Aaj ka din Maalkin ke naam. So, Baby, this little page is just for you. I hope it makes you smile. 💗</p><button class="goldbtn" onclick="document.getElementById('surprises').scrollIntoView({behavior:'smooth'})">Explore your surprises ↓</button></div>
+ <section id="surprises"><h2>✧ The Royal Surprise Garden</h2><p class="intro">No challenges today, Princess. Just little surprises made to make you smile. Tap each royal treasure to reveal it!</p>
+<div class="grid">
+<div class="gamecard"><div class="emoji">💌</div><h3>A Secret Note</h3><p>Ek chhota sa message, sirf meri Maalkin ke liye.</p><button class="goldbtn" onclick="revealNote()">Open the letter</button><p id="secretNote" style="display:none;color:#ffe6b4;min-height:0">Mdmjiii, I hope you know how special you are to me. Bas itna hi kehna tha. ❤️</p></div>
+<div class="gamecard"><div class="emoji">🎁</div><h3>Mystery Gift Box</h3><p>Baby, open it. It took royal-level effort. 😂</p><button class="goldbtn" onclick="revealGift()">Unwrap your gift</button><p id="giftReveal" style="display:none;color:#ffe6b4;min-height:0">🎁 Your gift: unlimited smiles, zero boring days, and one Tanshuuuu who is always cheering for you. 💗</p></div>
+<div class="gamecard"><div class="emoji">🌟</div><h3>Princess Compliment</h3><p>Tap whenever you need a little reminder of your magic.</p><button class="goldbtn" onclick="newCompliment()">Give me a compliment</button><p id="complimentReveal" style="color:#ffe6b4;min-height:0">Your royal compliment is waiting...</p></div>
+</div>
+<div style="text-align:center;margin-top:22px"><h3 style="font-family:Cinzel,serif;color:#ffe5aa">🌙 Make a Royal Wish</h3><p class="intro">Write one wish for your fairytale year. Keep it close to your heart.</p><input id="wishInput" maxlength="120" placeholder="My royal wish is..." style="width:min(100%,430px);padding:13px;border-radius:13px;border:1px solid #f5d78b66;background:#ffffff10;color:white;font:inherit"><br><button class="goldbtn" onclick="saveWish()">Seal my wish ✨</button><p id="wishResult" style="color:#ffe6b4"></p></div>
+</section>
+<section><h2>💌 A Little Royal Letter</h2><p class="letter">To our lovely Princess Vanshiii,<br><br>I don't know how to make some grand speech, so I'll just say this: you matter a lot to me, Vanshiii. I hope you keep smiling, keep being yourself, and get all the happiness you deserve. And haan, don't let this Maalkin attitude go anywhere. 💗<br><br>I made this small website for you. It may not be perfect, but I made it thinking about you. Hope you like it, Baby.<br><br><strong>With lots of love,</strong><br><span class="script">Tanshuuuu ❤️</span></p></section>
+ <section><h2>🌷 Royal Compliments</h2><div class="grid"><div class="gamecard"><div class="emoji">✨</div><h3>Your sparkle</h3><p>You make ordinary moments feel a little more magical.</p></div><div class="gamecard"><div class="emoji">🌸</div><h3>Your heart</h3><p>Your kindness is one of the loveliest things about you.</p></div><div class="gamecard"><div class="emoji">🌟</div><h3>Your smile</h3><p>A little sunshine that can brighten a whole day.</p></div></div></section>
+ <section><h2>🏰 The Crown Ceremony</h2><p class="intro">Every royal day deserves a crown. Tap below to reveal your official princess certificate.</p><button class="goldbtn" onclick="showCertificate()">Crown Princess Vanshiii 👑</button><div class="certificate" id="certificate"><div class="seal">👑</div><div class="eyebrow" style="color:#96622f">Certificate of Royalty</div><h2>Officially Crowned</h2><div class="certname">Princess Vanshiii</div><p>is hereby welcomed as the beloved princess of this little kingdom.</p><p>For being wonderfully, uniquely YOU.</p><div style="font-family:Great Vibes,cursive;font-size:30px;color:#8b4260">Aapka Tanshuuuu ❤️</div><div class="small" style="color:#805b4d;margin-top:12px">✧ By royal decree ✧</div></div></section>
+ <div class="hero" style="padding:25px"><div class="script">Aur haan, Mdmjiii...</div><h2 style="font-size:22px">Aap hi ho is chhote se kingdom ki Maalkin. Happy Princess Day, Baby! 💛</h2><p class="small">Made by Tanshuuuu, only for you ❤️</p></div>
+</main><div class="footer">✧ A tiny royal world made especially for Vanshiii ✧</div>
+<script>
+let audioCtx=null,oscillators=[],musicOn=false,volume=.18;
+function startMusic(){if(musicOn)return;const AC=window.AudioContext||window.webkitAudioContext;if(!AC)return;audioCtx=audioCtx||new AC();audioCtx.resume();musicOn=true;document.getElementById('musicLabel').textContent='Pause music';playLoop();}
+function playLoop(){if(!musicOn||!audioCtx)return;const notes=[523.25,659.25,783.99,659.25,587.33,698.46,880,698.46,523.25,659.25,783.99,1046.5];let i=0;function note(){if(!musicOn)return;const now=audioCtx.currentTime;const osc=audioCtx.createOscillator(),gain=audioCtx.createGain();osc.type='sine';osc.frequency.value=notes[i%notes.length];gain.gain.setValueAtTime(.0001,now);gain.gain.exponentialRampToValueAtTime(volume*.45,now+.08);gain.gain.exponentialRampToValueAtTime(.0001,now+.65);osc.connect(gain);gain.connect(audioCtx.destination);osc.start(now);osc.stop(now+.7);const o2=audioCtx.createOscillator(),g2=audioCtx.createGain();o2.type='triangle';o2.frequency.value=notes[i%notes.length]/2;g2.gain.setValueAtTime(.0001,now);g2.gain.exponentialRampToValueAtTime(volume*.12,now+.08);g2.gain.exponentialRampToValueAtTime(.0001,now+.8);o2.connect(g2);g2.connect(audioCtx.destination);o2.start(now);o2.stop(now+.82);i++;setTimeout(note,560)}note();}
+function toggleMusic(){if(musicOn){musicOn=false;document.getElementById('musicLabel').textContent='Play music'}else startMusic()}
+function enterKingdom(){document.getElementById('welcome').classList.add('hide');startMusic()}
+const compliments=[
+"Mdmjiii, your smile is honestly one of my favourite things. 🌷",
+"Maalkin, you don't even have to try to be special. You're just you. ✨",
+"Vanshiii, never forget how amazing you are. 💛",
+"Baby, I hope lots of good things come your way. 🦋",
+"Only one Maalkin like you. Thankfully. 👑",
+"You make my normal days a little less normal, Mdmjiii. 🌸"
+];
+let complimentIndex=-1;
+function revealNote(){document.getElementById('secretNote').style.display='block';}
+function revealGift(){document.getElementById('giftReveal').style.display='block';}
+function newCompliment(){complimentIndex=(complimentIndex+1)%compliments.length;document.getElementById('complimentReveal').textContent=compliments[complimentIndex];}
+function saveWish(){
+ const value=document.getElementById('wishInput').value.trim();
+ const result=document.getElementById('wishResult');
+ if(!value){result.textContent='Write your wish first, Princess. 💗';return;}
+ result.textContent='🔒 Your wish is sealed in the royal stars: “'+value+'” ✨';
+ document.getElementById('wishInput').value='';
+}
+function showCertificate(){
+ document.getElementById('certificate').classList.add('show');
+ confetti();
+ document.getElementById('certificate').scrollIntoView({behavior:'smooth',block:'center'});
+}
+function confetti(){for(let i=0;i<45;i++){let s=document.createElement('div');s.textContent=['✦','✨','💛','🌸'][i%4];s.style.cssText='position:fixed;z-index:30;left:'+Math.random()*100+'vw;top:-20px;font-size:'+(14+Math.random()*18)+'px;pointer-events:none;transition:transform 3s linear,top 3s linear;';document.body.appendChild(s);setTimeout(()=>{s.style.top='105vh';s.style.transform='rotate(500deg)'},30);setTimeout(()=>s.remove(),3300)}}
+</script>
+</body></html>
